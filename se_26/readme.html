@@ -1,0 +1,357 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+    <title>SlickEdit&reg; 2021 (v26.0.0) - Readme</title> </head>
+<body>
+<h2>Welcome to SlickEdit&reg; 2021 (v26.0.0)</h2>
+<p></p>
+<h3>CONTENTS</h3>
+<p>
+<a href="#additional_docs">Additional Documentation</a><br/>
+<a href="#rel_notes_0">Release Notes for v26.0.0</a><br/>
+</p>
+<p>
+Copyright 1988-2021 SlickEdit Inc.
+</p>
+<p>
+SlickEdit, Visual SlickEdit, Clipboard Inheritance, DIFFzilla, SmartPaste, 
+Context Tagging, Slick-C, and Code Quick | Think Slick are registered trademarks 
+of SlickEdit Inc. All other products or company names are used for 
+identification purposes only and may be trademarks of their respective owners. 
+Protected by U.S. Patent 5,710,926.
+</p>
+
+<hr size="4"/>
+<h3>SlickEdit 2021</h3>
+<p></p>
+
+<h3><a name="rel_notes_1">Fixes, Features, and Enhancements in SlickEdit 2021 (26.0.1)</a></h3>
+<ul>
+    <li>Added support for opening Visual Studio 2022 solutions.</li>
+    <li>Added tagging support for Java 8 lambda functions</li>
+    <li>Fixed bug parsing type of Java for loop iterator variables</li>
+    <li>Improved multi-file replace performance.</li>
+    <li>Fix for possible hang when do Replace (not replace in files) and choose Project or workspace.</li>
+    <li>Fix issue with commiting a file from the Compare Project with Git dialog if there
+is only one modified file in a folder.</li>
+    <li>Fix for Slick-C Stack if you run Git Blame from Projects tool window.</li>
+    <li>Add "*.mpp" and "*.mxx" to list of C/C++ file extensions (C++20 modules).</li>
+    <li>Fix for Python function argument help problem.</li>
+    <li>Fix for PHP color coding for interpolated strings.</li>
+
+    <li>In the Project > New... dialog, if the user elects not to add files directly, then we should always bring up the project properties dialog afterwards.</li>
+    <li>Fix Slick-C stack when trying to Comment Block if the middle comment characters are not single characters.</li>
+    <li>Fix for focus not going back to editor window after upload of ftp document after save/quit.</li>
+    <li>Fix for "Copy Tree" buttons in multi-file diff.</li>
+    <li>Smarter home/end key support for Files tool window when focus is in text box. home/end keys will operator on the list if the text box is empty.</li>
+    <li>Fixed bug where Auto-complete did not work well when Dynamic Surround was active.</li>
+    <li>Fixed bug increasing or decreasing size of default fonts in Font options dialog.</li>
+    <li>Sometimes committing a file can fail from the GUI Compare dialog.</li>
+    <li>Fix for Slick-C stack when you try to diff a file with the most up to date version in CVS.</li>
+    <li>Fix bug in code that prompts to remind you what key "unsurround" or "copy-surround-block" commands are bound to.</li>
+    <li>Fix for bug diffing two line ranges in the same buffer.  If you saved "file2", the change will not be updated in the buffer in the editor.</li>
+    <li>Fix for bug where the Cancel button on the "Finish background tagging jobs" progress dialog did nothing.</li>
+    <li>macOS fix for crash when using fill selection from the Edit menu</li>
+    <li>When changing the default color profile, make sure that all open files are
+changed, even if in "multiple-files-share-window" mode (like Brief uses).</li>
+    <li>Fixed problem where context menu for a breakpoint has the "Properties..." entry disabled.</li>
+    <li>Do not show matching symbols if the user did not ask to see them.</li>
+    <li>Fixed smart indenting for Swift. Also added support for SmartPaste and smart tab.</li>
+    <li>Fixed smart indenting for Google Go. Also added support for SmartPaste and smart tab.</li>
+    <li>Document > [lang] Options... will now restore the previously selected language
+options page instead of always starting at Language > General.</li>
+    <li>Fixed bug where the Defs tool window would not work correctly when you 
+double-click to expand the symbols in a large PowerShell source file.</li>
+    <li>Fix misspelled function name.</li>
+    <li>Fix for stack when using "diff -comment &lt;comment&gt;..."</li>
+    <li>Get the line range right if diffing a line range or symbol.</li>
+    <li>Fix for pressing ESC too quickly when the Compare Directory/Workspace/Project 
+with Version Control.</li>
+    <li>Fixed bug where highlighting would not update after toggling the draw box option in the Highlight Tool Window.</li>
+    <li>Fixed bug where highlight tool window would fall asleep and not continue coloring lines.</li>
+    <li>Fixed bug which caused scroll bar markup for Highlight Tool Window to work inconsistently.</li>
+    <li>Fixed bug where highlight tool window did not work when the top-of-file line is enabled.</li>
+    <li>Fix for Java context tagging bug where we were incorrectly limiting 
+access to private fields in nested class</li>
+    <li>Added new commands to toggle the vertical line column 
+(toggle-vertical-line-column and toggle-vertical-line-at-column).</li>
+    <li>Fixed bug where the light bulb does not show up in the editor margin
+until you select a completion in auto-complete.</li>
+    <li>Fix for Slick-C context tagging case where it did not find all references to a 
+function called relative to a form wid.</li>
+    <li>Fix so plugins load on macOS. Also, new 26.0.0 installer or 26.0.1 which is not yet available.</li>
+    <li>Fixed bugs handling #undef of pre-defined preprocessing macro.</li>
+    <li>Fix Slick-C stack when creating new project with relative project path.</li>
+    <li><b>Not all fixes/changes have been listed.</b></li>
+</ul>
+<p></p>
+
+<h3><a name="rel_notes_0">Fixes, Features, and Enhancements in SlickEdit 2021 (26.0.0)</a></h3>
+<ul>
+    <li><b><u>Language Support</u></b>
+        <ul>
+            <li><b>New Julia Language support</b>
+            <ul>
+                <li>Color coding</li>
+                <li>Smart editing features including smart indenting, SmartPaste(TM), and reindenting on Tab</li>
+                <li>Support for translated backslash unicode abbreviation names to unicode characters.</li>
+                <li>Defs tool window lists tags and supports displaying statements</li>
+                <li>Tab key translation support for backslash unicode character specifications ("\alpha&lt;Tab&gt;")</li>
+                <li>Single and multi-file project support</li>
+                <li>Partial support for Context Tagging(TM)</li>
+                <li>Interactive REPL support (Read-Eval-Print-Loop)</li>
+            </ul>
+            </li>
+            <li><b>New Terraform Language support</b>
+            <ul>
+                <li>Color coding</li>
+                <li>Smart editing features including smart indenting, SmartPaste(TM), and reindenting on Tab</li>
+                <li>Defs tool window lists outer block headings for navigation</li>
+            </ul>
+            </li>
+            <li><b>New Dart Language support (preliminary, work in progress)</b>
+            <ul>
+                <li>Color coding</li>
+                <!--<li>Smart editing features including smart indenting, SmartPaste(TM), and reindenting on Tab</li>-->
+                <!--<li>Support for translated backslash unicode abbreviation names to unicode characters.</li>-->
+                <li>Defs tool window lists tags and supports displaying statements</li>
+                <li>Single and multi-file project support</li>
+                <li>Partial support for Context Tagging(TM)</li>
+                <li>Interactive REPL support (Read-Eval-Print-Loop)</li>
+                <li>Real time error support</li>
+            </ul>
+            </li>
+            <li><b>C++ and Objective-C</b>
+            <ul>
+                <li>Tagging supports new syntax introduced in C++20.</li>
+                <li>Support for tagging Objective-C function blocks.</li>
+                <li>Numerous other improvements to Objective-C context tagging.</li>
+                <li>Added Advanced C/C++ Advanced Option to treat nested structs like they are scoped in ANSI-C. This can help when working with mixed code.</li>
+            </ul>
+            </li>
+            <li><b>Python Enhancements</b>
+            <ul>
+                <li>Updated run-time tag file to Python 3.9.1</li>
+            </ul>
+            </li>
+            <li><b>Swift Enhancements</b>
+            <ul>
+                <li>Interactive REPL support (Read-Eval-Print-Loop)</li>
+            </ul>
+            </li>
+        </ul>
+    </li>
+    <li><b><u>Project Support</u></b>
+        <ul>
+        <li><b>Enhanced wildcard support</b>
+            <ul>
+                <li>Improved Visual Studio wildcard project support (i.e. csproj). Now automatically updates Project tool window, tag file, and file list in the background. No need to explicitly Refresh the Project tool window and/or rebuild the tag file. </li>
+                <li>When adding new files to the project, no explicit filenames are added to the project if they match existing wildcards.</li>
+                <li>Improved updating when new files matching wildcards are added while outside of SlickEdit.</li>
+                <li>The wildcard cache is saved when you close the workspace and restored when you open the workspace. For large wildcard projects, this can significantly reduce startup time when restoring the Project tool window. After opening the workspace, the wildcards are updated in the background.</li>
+                <li>Wildcards are updated in the background except when the wildcard cache is empty.</li>
+            </ul>
+        </li>
+        <li><b>Improved Quick-Start project wizard</b>
+            <ul>
+                <li>Quick-Start configuration lets you directly open projects or workspaces from other tools.</li>
+                <li>Project &gt; Open Workspace... adds a new smart dialog to help you discover that SlickEdit can open projects and workspaces from other tools.</li> 
+            </ul>
+        </li>
+        <li><b>Improved New Project dialog</b>
+            <ul>
+                <li>Project &gt; New... dialog is now resizable.</li>
+                <li>Project &gt; New... dialog adds ability to directly add a tree of source files, recursively or as a wildcard.</li>
+                <li>Project &gt; New... will set the project working directory if the source tree added differs from the project directory.</li>
+            </ul>
+        </li>
+        </ul>
+    </li>
+    <li><b><u>Find and Replace</u></b>
+        <ul>
+            <li>Improved ability to cancel a foreground search/replace. If your search is taking too long (more than 5 seconds), press any key (i.e like Esc) and you will be prompted to cancel. This works great for very slow regular expressions. For a foreground search or replace, keys are not checked until 5 seconds have gone by (status line starts showing percentages)y. Checking for keys significantly slow down the search which is why keys aren't checked for initially.</li>
+            <li>Improved ability to cancel a foreground multi-file search/replace. If your search is taking too long, press any key (i.e like Esc) and you will be prompted to cancel. This works great for very slow regular expressions. Note that a multi-file search and replace is always done in the foreground. Also, when you do a background multi-file search, currently open files are searched in the foreground.</li>
+            <li>Added threading support for "List current context" search option when searching multiple files. Significantly faster if less than half the files have a match.</li>
+        </ul>
+    </li>
+    <li><b><u>Files</u></b>
+        <ul>
+            <li>Open tool window now has an option to show indicator for files which are read-only on disk.</li>
+            <li>Open tool window now has an option to show indicator for files which are writable on disk.</li>
+        </ul>
+    </li>
+    <li><b><u>DIFFzilla&reg;</u></b>
+        <ul>
+            <li>Next Diff and Prev Diff are now much faster.</li>
+            <li>Multi-file diff now much faster on extremely large files.</li>
+            <ul>
+                <li>Multi-file diff now has a size limit to initially enforce a byte-by-byte compare ratther than an actual diff.</li>
+                <li>You can still diff by clicking the Diff button in the multi-file diff dialog.</li>
+            </ul>
+            <li>Added support for horizontal scrolling using mouse.</li>
+        </ul>
+    </li>
+    <li><b><u>Version Control Enhancements</u></b>
+        <ul>
+            <li>General version control enhancements</li>
+            <ul>
+                <li>Diff dialog now built in to Compare Workspace/Project/Directory with version control.</li>
+                <li>Shelving now supports adding a file to any existing shelf file, not just the ones listed in the menu.</li>
+                <li>Version Control Configuration setup re-tooled</li>
+                <ul>
+                    <li>Much easier to set the version control system for default, current workspace, and project.</li>
+                    <li>Old separate list of SCC providers removed.</li>
+                    <li>New lists make it easy to see which systems SlickEdit has specialized support for, SCC support for, and old-style command line support for.</li>
+                    <li>Version Control menu now at top level.</li>
+                    <li>Version Control Configuration now in its own category in Options dialog.</li>
+                </ul>
+            </ul>
+            <li>Git specific enhancements</li>
+            <ul>
+                <li>Support for the following now integrated into SlickEdit</li>
+                <ul>
+                    <li>Checkout</li>
+                    <ul>
+                        <li>Supports listing branches available locally, or listing all remote branches.</li>
+                        <li>Has support to checkout a new branch.</li>
+                    </ul>
+                    <li>Stash</li>
+                    <li>Pop</li>
+                    <li>Pull</li>
+                    <li>Push</li>
+                    <li>Blame</li>
+                </ul>
+            </ul>
+        </ul>
+    </li>
+    <li><b><u>Tagging</u></b>
+        <ul>
+            <li>New History category added to Auto-Complete which shows recent and frequently used completions you have used in the current scope.</li>
+            <li>Auto-Complete now supports suggesting completions for keywords and symbols you have made minor typos in.</li>
+            <li>Key parts of the Auto-Complete engine have been rewritten in native C++ for better performance</li>
+            <li>Added support for tagging source files in compressed tar archives.</li>
+            <li>Add <code>symbol-info-help</code> command to bring up symbol information like mouse-over does for symbol under cursor (Ctrl+Alt+Comma)</li>
+            <li>Add <code>codehelp-update-context-stats</code> for reporting local context tagging performance statistics</li>
+            <li>Add <code>codehelp-tag-file-stats</code> for reporting tag file size statistics for debugging performance issues</li>
+        </ul>
+    </li>
+    <li><b><u>Debugger</u></b>
+        <ul>
+            <li>TBD</li>
+        </ul>
+    </li>
+    <li><b><u>Highlight Tool Window</u></b>
+        <ul>
+            <li>New feature for highlighting word patterns.</li>
+            <li>Allows you to quickly add words, strings, or regular expressions to highlight</li>
+            <li>Allows you to define mulitple Highlight profiles</li>
+            <li>Allows you to select several style options for how to do the highlighting</li>
+            <li>Word patterns can be case-sensitive, case-insensitive, or language dependent</li>
+            <li>Word patterns can be restricted to a particular language mode</li>
+            <li>Works seamlessly with very large files</li>
+            <li>Uses extended color palette which adapts to the current color profile</li>
+            <li>Has option to show scroll bar markup for highlighted items.</li>
+        </ul>
+    </li>
+    <li><b><u>Appearance Enhancements</u></b>
+        <ul>
+            <li><b>Application Theme</b>
+                <ul>
+                    <li>Automatically detect Windows 10 Dark app mode and use our Dark theme</li>
+                    <li>Improved Dark application color theme scroll bar colors to make it more visible</li>
+                </ul>
+            </li>
+            <li><b>Fonts</b>
+                <ul>
+                    <li>Added per-language configuration for editor, minimap, and diff font and size</li>
+                    <li>The Window &gt; Font... dialog is now resizable</li>
+                    <li>Font ligature support added for Windows 32-bit</li>
+                    <li>Font ligature support added for Linux 64-bit (Qt5 version only,Request Qt5 Linux installer)</li>
+                    <li>Improved Appearance &gt; Fonts configuration dialog</li>
+                </ul>
+            </li>
+            <li><b>Colors</b>
+                <ul>
+                    <li>Add ability to have a color scheme inherit settings from a predefined color scheme.</li>
+                    <li>Added new color schemes: Charcoal, Ash, Stone, and Onyx</li>
+                    <li>Added ability to change color profile per-buffer (View &gt; Color...)</li>
+                    <li>Added ability to change color profile for mini-map per-buffer (right-click &gt; Color...)</li>
+                    <li>Added per-language configuration for editor and minimap color profiles</li>
+                    <li>Enhanced Color dialog to preview all colors in the list of colors</li>
+                    <li>Added setting to Color dialog for default mini-map color profile</li>
+                    <li>Improved code for resizing the Color configuration dialog</li>
+                    <li>Added ability to import color themes from Visual Studio, Xcode, VSCode, and Eclipse</li>
+                </ul>
+            </li>
+            <li><b>Symbol coloring</b>
+                <ul>
+                    <li>Each color profile now has colors defined for symbol coloring rules. This mitigates the need for a relationship between color profiles and a compatible symbol coloring scheme, as all built-in symbol coloring schemes are now compatible with all built-in color profiles.</li>
+                    <li>Each color profile also has a palette of symbol coloring colors, selected as color-safe foreground colors tuned to the background canvas color of each color profile.  These can be used when adding new symbol coloring rules instead of defining colors directly in the symbol coloring scheme (which may or may not be compatible with all color profiles).</li>
+                    <li>Improved code for resizing the Symbol Coloring configuration dialog.</li>
+                    <li>Add option to "Override Library Symbols" so that identifiers normally color coded as "Library Symbol" or "User Defined Keyword" can be colored by Symbol Coloring if their definition is found by Context Tagging.</li>
+                </ul>
+            </li>
+            <li><b>Tree controls and tool windows</b>
+                <ul>
+                    <li>Tree controls now support smooth horizontal scrolling. Examples include the Defs tool window, Class, Projects, Symbols, Bookmarks, Annotations, References, and most Debug tool windows.</li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+    <li><b><u>Printing</u></b>
+        <ul>
+            <li>Added ability to select a color profile for printing.</li>
+            <li>This makes it easier to print color or grayscale even if 
+                you are using an editor color profile with a dark background.</li>
+        </ul>
+    </li>
+    <li><b><u>F1 Edit Window Help Enhancements</u></b>
+        <ul>
+            <li>When you press F1 on a function name or member name, SlickEdit will attempt to determine the package/namespace/class that the current word belongs to. The class (possibly with namespace/package) is added to the search URL so you are much more likely to get help on the right member. This is very helpful for highly typed languages like C#, Java, and C++.</li>
+            <li>Custom help URLs can be configured per Language. Multiple URLs can be configured based on what is found at the cursor.</li>
+        </ul>
+    </li>
+    <li><b><u>Build Window Enhancements</u></b>
+        <ul>
+            <li>Added option to hide VSLICKERRORPATH lines to reduce clutter in build window. These lines are hidden by default.</li>
+            <li>Added option to hide change directory commands to reduce clutter in build window. These lines are shown by default.</li>
+            <li>Improved Terminal and Build window completion support for tar, jar, and unzip commands.</li>
+            <li>Build commands with "Clear build window" set now queue up the clear command along with the build command. That way, you can still see all the output from the previous build command until it's finished.</li>
+        </ul>
+    </li>
+    <li><b><u>Color Coding Engine improvements</u></b>
+        <ul>
+            <li>Previously, you could only specify the color for the entire start and/or end text that was matched. Now you can specify multiple colors using match groups and/or offsets and lengths.</li>
+        </ul>
+    </li>
+    <li><b><u>General</u></b>
+        <ul>
+            <li>Much improved touch scrolling and touch support.</li>
+            <li>By default, when creating a new file without specifying a filename sets the filename to something like "Untitled YYYY-MM-DD". You can turn this new feature off. This makes it easier to identify Untitled files and use backup history. Also this allows you to save untitled files without specifying a name. If you close or rename (Save As) an Untitled file, the temp file will be deleted if necessary.</li>
+            <li>Added $&lt;VarName&gt; color coding for strings which supports them (PHP, PowerShell, Kotlin, Scala, Perl, Dart).</li>
+            <li>Improved multiple clipboard support. When you copy text to the clipboard, if the current clipboard is a text clipboard created by another application, that system clipboard is added to the multiple clipboards before your clipboard is added. This allows you to get back to older clipboards created outside of SlickEdit.</li>
+            <li>Windows: Added support for pasting FileNameW format clipboard as text. This allows you to use Ctrl+C on a filename in the Windows File Explorer and then paste it into SlickEdit.</li>
+            <li>Linux: Improved launcher support. Better support for Gnome launcher. Added menu item to create another instance of SlickEdit. Added commands for quickly editing the various .desktop launcher files (edit_desktop_shortcut,edit_app_shortcut,edit_diff_app_shortcut). </li>
+            <li>Find File (not to be confused with Find in Files) now supports matching files, directories, or both.</li>
+            <li>Improved multiple instance support. Added -sid &lt;instance-id&gt; invocation option which allows you to specify a specific instance. No instance id specifies the most recently activated instance.</li>
+            <li>Bookmarks will now attempt to restore the window the bookmark was set in when using One file per window mode. The Bookmark window id is saved and restored when you restart SlickEdit.</li>
+            <li>Added Softwrap line break cache. This helps scrolling performance in situations where there are long lines that are softwrapped.</li>
+            <li>Window &gt; Font selection form is now resizable.</li>
+            <li>When using multiple cursors, the Tab key can now be used to align multiple lines of text at a common tab stop, making it very easy to align tabular data.</li>
+            <li>The copy-to-clipboard command (Ctrl+C) will now detect if there is no selection and the current line is the first line of a block statement, and prompt if you want to copy the entire block, just the current line, or the outer-most surrounding statement. This feature closely mirrors the behavior when using the cut-line or delete-line commands on the first line of a block statement, where you are prompted to just delete the current line, delete the entire block, or unsurround the block.</li>
+            <li>New copy-code-block command can be used with the cursor on the first line of a code block to copy the contents of a code block to the clipboard.</li>
+            <li>New copy-surround-block command can be used with the cursor on the first line of a statement block to copy the outer-most surrounding statement. This statement can then be pasted automatically triggering Dynamic Surround mode.  It is also a very simple way to copy and paste an outer statement.</li>
+            <li>XMLDoc comment expansion will skip <code>&lt;returns&gt;</code> for classes, packages, constructors, destructors, and functions with <code>void</code> return types.</li> 
+        </ul>
+    </li>
+    <li><b><u>Documentation</u></b>
+        <ul>
+            <li>Updated PDF emulation cheat sheets (found in slickedit/docs/ directory).</li>
+        </ul>
+    </li>
+
+    <li><b>Not all fixes/changes have been listed.</b></li>
+</ul>
+
+</body>
+</html>

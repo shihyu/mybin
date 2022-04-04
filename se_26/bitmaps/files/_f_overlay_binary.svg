@@ -1,0 +1,14 @@
+<svg version="1.1"
+
+    xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink" width="512" height="512" viewBox="0 0 512 512">
+    <g transform="translate(94,64)">
+		<rect x="0" y="158" width="10" height="200" stroke="black" fill="black" stroke-width="30"/>
+    </g>
+    <g transform="translate(224,64)">
+		<ellipse cx="0" cy="256" r="200" rx="50" ry="100" stroke="black" fill="none" stroke-width="30"/>
+	</g>
+    <g transform="translate(342,64)">
+		<rect x="0" y="156" width="10" height="200" stroke="black" fill="black" stroke-width="30"/>
+	</g>
+</svg>
